@@ -10,6 +10,8 @@ interface Container {
     b: () => B;
 }
 
+// ---- Injectable components. ----
+
 const componentA1 = ({ b }: { b: () => B }) => ({
     methodA(): void {
         console.log("here is methodA1");
@@ -36,6 +38,8 @@ const componentB2 = ({ }) => ({
     },
 });
 
+// ---- DI Container definitions. ----
+
 function createContainer1() {
     const container = {
         a: () => componentA1(container), // injection
@@ -59,6 +63,8 @@ function createContainer3() {
     };
     return container;
 }
+
+// ---- Test components and container ----
 
 function main() {
     {
