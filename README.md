@@ -1,6 +1,8 @@
 # ts-simple-di
 A Simple DI pattern for TypeScript.
 
+The code is as follows.
+
 ```typescript
 interface A {
     methodA(): void;
@@ -93,3 +95,5 @@ function main() {
 
 main();
 ```
+
+If you want to execute, type `npm test`.
